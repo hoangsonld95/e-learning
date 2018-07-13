@@ -6,9 +6,25 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- <style>
+      .nav-item {
+        float: right;
+        padding: 14px 16px;
+      }
+    </style> -->
+
   </head>
 
   <body>
-    <%= yield %>
+
+      <%= render('layouts/header') %>
+
+      <div class="container">
+        <%= yield %>
+        <%= render('layouts/footer') %>
+        <%= debug(params) if Rails.env.development? %>
+      </div>
+
   </body>
 </html>
