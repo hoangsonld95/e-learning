@@ -1,0 +1,7 @@
+<% @todos.each do |todo| %>
+  <li>
+    <%= todo.description %>
+    <%= todo.priority %>
+    <%= link_to "Done", todo_path(todo), method: :delete %>
+  </li>
+<% end %>

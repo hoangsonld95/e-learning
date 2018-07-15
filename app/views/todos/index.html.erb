@@ -1,0 +1,14 @@
+<h1>Todo List</h1>
+
+<%= form_for Todo.new, remote: true do |f| %>
+
+  <%= f.text_field :description, placeholder: "Description", class: "form-group" %>
+  <%= f.text_field :priority, placeholder: "Priority", class: "form-group" %>
+  <%= f.submit %>
+
+<% end %>
+
+<ul>
+  <%= render ("todos/todo")  %>
+</ul>
+
